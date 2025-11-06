@@ -14,8 +14,6 @@ import { getImageUrl } from '@/utils/getImageUrl';
 import { useCartStore } from '@/stores/cartStore';
 import SearchBar from './common/SearchBar';
 import { useAllCategories } from '@/hooks/category/useAllCategories';
-import { useConfigOne } from '@/hooks/config/useConfigOne';
-import { useConfigByTenant } from '@/hooks/config/useConfigByTenant';
 
 const { Panel } = Collapse;
 
