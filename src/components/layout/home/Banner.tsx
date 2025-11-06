@@ -238,7 +238,7 @@ export default function Banner() {
             </div>
             <div>
               <h3 className="font-semibold text-gray-800 text-lg">
-                Thực phẩm
+                Thực phẩm sạch.
               </h3>
               <p className="text-gray-600 text-sm">Vệ sinh, an toàn</p>
             </div>
