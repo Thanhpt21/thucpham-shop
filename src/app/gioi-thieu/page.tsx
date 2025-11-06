@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   ShoppingOutlined,
   ClockCircleOutlined,
   EnvironmentOutlined,
   CheckCircleOutlined,
-} from '@ant-design/icons';
+} from "@ant-design/icons";
 
 export default function AboutUsPage() {
   const [mounted, setMounted] = useState(false);
@@ -15,10 +15,10 @@ export default function AboutUsPage() {
   useEffect(() => setMounted(true), []);
 
   const storeInfo = {
-    address: 'Địa chỉ cửa hàng của bạn, Quận/Huyện, Thành phố',
-    phone: '0123 456 789',
-    email: 'contact@shop.vn',
-    hours: 'Từ Thứ Hai đến Chủ Nhật: 7h00 - 21h00',
+    address: "Địa chỉ cửa hàng của bạn, Quận/Huyện, Thành phố",
+    phone: "0123 456 789",
+    email: "contact@shop.vn",
+    hours: "Từ Thứ Hai đến Chủ Nhật: 7h00 - 21h00",
   };
 
   if (!mounted) {
@@ -31,6 +31,21 @@ export default function AboutUsPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Breadcrumb */}
+      <div className="border-b border-gray-200">
+        <div className="w-full max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 py-4">
+          <div className="flex items-center gap-2 text-sm">
+            <a
+              href="/"
+              className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
+            >
+              Trang chủ
+            </a>
+            <span className="text-gray-400">/</span>
+            <span className="text-gray-600">Giới thiệu</span>
+          </div>
+        </div>
+      </div>
       {/* Hero Section */}
       <div className="relative w-full h-[500px] overflow-hidden">
         <img
@@ -51,7 +66,6 @@ export default function AboutUsPage() {
 
       {/* Main Container */}
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8">
-        
         {/* About Section */}
         <div className="py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -69,7 +83,9 @@ export default function AboutUsPage() {
               <div className="inline-block">
                 <div className="flex items-center gap-2 px-4 py-2 bg-green-100 rounded-full">
                   <ShoppingOutlined className="text-green-600 text-lg" />
-                  <span className="text-green-700 font-semibold text-sm">Về chúng tôi</span>
+                  <span className="text-green-700 font-semibold text-sm">
+                    Về chúng tôi
+                  </span>
                 </div>
               </div>
 
@@ -78,48 +94,65 @@ export default function AboutUsPage() {
               </h2>
 
               <p className="text-gray-600 text-lg leading-relaxed">
-                Shop Thực Phẩm là nơi mua sắm tin cậy, thân thiện để quý khách khám phá, 
-                trải nghiệm sự đa dạng của văn hóa ẩm thực và nghệ thuật thưởng thức.
+                Shop Thực Phẩm là nơi mua sắm tin cậy, thân thiện để quý khách
+                khám phá, trải nghiệm sự đa dạng của văn hóa ẩm thực và nghệ
+                thuật thưởng thức.
               </p>
 
               <div className="space-y-4 pt-4">
                 <div className="flex items-start gap-3">
                   <CheckCircleOutlined className="text-green-500 text-xl mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Sản phẩm chất lượng</h3>
-                    <p className="text-gray-600 text-sm">Cam kết nguồn gốc rõ ràng, an toàn vệ sinh thực phẩm</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Sản phẩm chất lượng
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      Cam kết nguồn gốc rõ ràng, an toàn vệ sinh thực phẩm
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <CheckCircleOutlined className="text-green-500 text-xl mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Đa dạng lựa chọn</h3>
-                    <p className="text-gray-600 text-sm">Hàng nghìn sản phẩm từ thực phẩm tươi sống đến hàng khô, gia vị</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Đa dạng lựa chọn
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      Hàng nghìn sản phẩm từ thực phẩm tươi sống đến hàng khô,
+                      gia vị
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <CheckCircleOutlined className="text-green-500 text-xl mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Giá cả hợp lý</h3>
-                    <p className="text-gray-600 text-sm">Cam kết giá tốt nhất, nhiều chương trình khuyến mãi hấp dẫn</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Giá cả hợp lý
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      Cam kết giá tốt nhất, nhiều chương trình khuyến mãi hấp
+                      dẫn
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <CheckCircleOutlined className="text-green-500 text-xl mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Dịch vụ tận tâm</h3>
-                    <p className="text-gray-600 text-sm">Đội ngũ nhân viên chuyên nghiệp, nhiệt tình phục vụ</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Dịch vụ tận tâm
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      Đội ngũ nhân viên chuyên nghiệp, nhiệt tình phục vụ
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        
 
         {/* Call to Action */}
         <div className="py-16 md:py-24">
